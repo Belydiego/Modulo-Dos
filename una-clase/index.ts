@@ -6,7 +6,7 @@
 
 // crear la clase Banda aquí
 
-class Banda {
+/*class Banda {
   miembros: [];
 }
 
@@ -46,3 +46,4 @@ function main() {
 }
 
 main();
+*/
