@@ -1,4 +1,7 @@
-class Peli {
+/*class Peli {
+  constructor(primerTitulo: string) {
+    this.title = primerTitulo;
+  }
   title: string;
   rating: number;
   getTitle() {
@@ -8,13 +11,13 @@ class Peli {
 
 function main() {
   // instancias: objetos creados a partir de class
-  const peli = new Peli();
-  peli.title = "Un Titulo";
+  const peli = new Peli("Batman");
+
   peli.rating = 4;
-  const peli2 = new Peli();
-  peli2.title = "Otro titulo";
+  const peli2 = new Peli("Superman");
+
   peli2.rating = 6;
   console.log(peli.getTitle());
   console.log(peli2.getTitle());
 }
-main();
+main();*/

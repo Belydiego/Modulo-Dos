@@ -1,13 +1,31 @@
-// objeto literal creado sin una clase
-/*const objeto = {
-  titulo: "titulo",
-  id: 1,
-};*/
-
 // crear la clase Banda aquí
 
-/*class Banda {
-  miembros: [];
+class Banda {
+  members: string[];
+  albums: object[];
+  constructor(members: string[], albums: object[]) {
+    this.members = members;
+    this.albums = albums;
+  }
+
+  getFirstAlbum() {
+    return this.albums[0];
+  }
+
+  getAllAlbums() {
+    return this.albums;
+  }
+
+  getAllMembers() {
+    return this.members;
+  }
+  getRandomSong(albumTitle) {
+    const album = this.albums.find((album: any) => {
+      if (album.title === albumTitle) {
+        return true;
+      }
+    });
+  }
 }
 
 // no modificar este test
@@ -46,4 +64,3 @@ function main() {
 }
 
 main();
-*/
