@@ -2,8 +2,8 @@
 
 class Banda {
   members: string[];
-  albums: object[];
-  constructor(members: string[], albums: object[]) {
+  albums: any[];
+  constructor(members: string[], albums: any[]) {
     this.members = members;
     this.albums = albums;
   }
@@ -25,6 +25,9 @@ class Banda {
         return true;
       }
     });
+    const posicionRandom = Math.random() * album.songs.length;
+    const posicionRedondeada = Math.floor(posicionRandom);
+    return album.songs[posicionRedondeada];
   }
 }
 
