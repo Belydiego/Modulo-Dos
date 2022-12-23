@@ -1,4 +1,4 @@
-class AlbumDeBanda {
+/*class AlbumDeBanda {
   title: string;
   songs: string[];
   constructor(title: string, songs: string[]) {
@@ -38,4 +38,4 @@ function main() {
   console.log(unaBanda.albums);
 }
 
-main();
+main();*/

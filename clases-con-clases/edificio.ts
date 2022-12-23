@@ -1,4 +1,42 @@
 // crear las clases Edificio, Piso y Departamento aquí
+class Departamento {
+  nombre: string;
+  constructor(nombre: string) {
+    this.nombre = nombre;
+  }
+  getName() {
+    return this.nombre;
+  }
+}
+
+class Piso {
+  nombre: string;
+  deptos: Departamento[] = [];
+  constructor(nombre: string) {
+    this.nombre = nombre;
+  }
+  pushDepartamento(depto: Departamento) {
+    return this.deptos.push(depto); // lista de departamentos con cada obj departamento dentro
+  }
+  getDepartamento(): Departamento[] {
+    return this.deptos;
+  }
+}
+
+class Edificio {
+  piso: Piso[];
+  constructor(piso: Piso[]) {
+    this.piso = piso;
+  }
+  addDepartamentoToPiso(nombreDePiso: string, departamento: Departamento) {
+    const pisoEncontrado = this.piso.find((p) => p.nombre == nombreDePiso);
+    return pisoEncontrado.pushDepartamento(departamento); //  agregamos dentro del piso la lista de departamentos
+  }
+  getDepartamentosByPiso(nombreDePiso: string): Departamento[] {
+    const pisoEncontrado = this.piso.find((p) => p.nombre == nombreDePiso);
+    return pisoEncontrado.getDepartamento(); //conseguimos dentro del piso la lista de departamentos
+  }
+}
 
 // no modificar este test
 function testClaseEdificio() {
@@ -30,3 +68,4 @@ function testClaseEdificio() {
 function main() {
   testClaseEdificio();
 }
+main();
