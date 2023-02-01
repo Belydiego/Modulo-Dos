@@ -1,3 +1,5 @@
+import * as funcionReverse from "lodash/reverse";
+
 class Product {
   price: number;
   name: string;
@@ -23,12 +25,17 @@ class ProductoElectronico extends Product {
   setApps(apps: string[]) {
     this.apps = apps;
   }
-  getAppsReverse() {}
+  getAppsReverse() {
+    return funcionReverse(this.apps);
+  }
 }
 function main() {
   const iphone = new ProductoElectronico(70000, "iphone", true);
   iphone.setUserBatteries(true);
+  iphone.setApps(["1 whatsapp", "2 instagram", " 3 chrome"]);
   console.log(iphone);
   console.log(iphone.getPrice());
+  console.log(iphone.apps);
+  console.log(iphone.getAppsReverse());
 }
 main();
